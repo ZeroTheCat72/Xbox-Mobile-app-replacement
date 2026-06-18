@@ -1,0 +1,146 @@
+
+body {
+    font-family: 'segoe UI';
+    background-color: rgb(19, 19, 19);
+    color: white;
+}
+
+a {
+    text-decoration: none;
+    color: white
+}
+
+#greatDealsTab, #friendsTab, #recentlyPlayedXgamesTab {
+    margin-top: 12px;
+    display: flex;
+    justify-content: space-evenly;
+    overflow-x: scroll;
+    gap: 48px;
+}
+
+#greatDealsTab {
+    padding: 30px 0
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+.gamerPic {
+    border-radius: 3.40282e38px;
+    width: 60px;
+}
+#accDetailsText {
+    
+    line-height: 0;
+    gap: 0;
+}
+#accDetailsMiniTab {
+    display: flex;
+    gap: 12px;
+}
+
+#root {
+    display: block;
+    margin: 0 auto;
+}
+#friendsTab {
+    gap: 12px;
+}
+/**Tiles stuff **/
+
+.gameTileImg {
+    width: 100%;
+}
+
+.friendTile {
+    background-color: rgb(15, 15, 15);
+    min-width: 120px;
+    min-height: 150px;
+    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    line-height: 0;
+}
+.friendGamertag {
+    text-align: center;
+}
+
+.gameTile {
+    aspect-ratio: 1/1.2;
+    min-width: 250px;
+    min-height: 350px;
+    border-radius: 12px;
+    background-color: rgb(15, 15, 15);
+}
+.gameTileImg {
+    border-radius: 12px 12px 0 0;
+}
+
+.friendTile .gamerPic {
+    margin-top: 12px;
+}
+
+.presenceOffline {
+    color: grey
+}
+.presenceOnline {
+    color: #4b8315
+}
+
+.searchBar {
+    display: block;
+    margin: 0 auto;
+    background-color: rgb(29, 29, 29);
+    border: none;
+    border-radius: 8px;
+    padding: 12px 20%;
+    color: white
+}
+hr {
+    border: 1px solid rgb(15, 15, 15);
+    margin: 8px;
+}
+
+#navBar {
+    display: absolute;
+    justify-content: space-evenly;
+    position: sticky;
+    bottom: 0;
+}
+
+@media screen and (min-width: 600px) {
+    body {
+        background-image: url('./assets/xbox-original-newLogo.png');
+    }
+    #root {
+        background-color: rgba(19, 19, 19, 0.9);
+    }
+    #greatDealsTab, #friendsTab, #recentlyPlayedXgamesTab {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        overflow-x: scroll;
+    }
+    .gameTile {
+        max-width: 200px;
+        min-width: 200px;
+        max-height: 300px;
+        min-height: 300px;
+    }
+    .gameTileImg {
+    min-width: 100px;
+
+    }
+    h3 {
+        font-size: smaller;
+    }
+    #navBar, hr {display: none}
+
+    ::-webkit-scrollbar {
+        display: unset;
+        background-color: rgb(29, 29, 29);
+    }
+}
