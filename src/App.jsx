@@ -41,7 +41,7 @@ function fixForStoreURL(str) {
 
 async function getBestRated() {
     await fetch('https://api.xbl.io/v2/marketplace/best-rated', {
-    headers: { 'X-Authorization': 'f195ccb3-d5a4-4cbd-82da-b80e3eab1abf' }
+    headers: { 'X-Authorization': 'YOUR_XBL_API_KEY' }
 })
 
     .then((response) => response.json())
@@ -53,7 +53,7 @@ async function getBestRated() {
 
 async function getAccData(apiKey) {
     await fetch('https://api.xbl.io/v2/account', {
-        headers: { 'X-Authorization': 'f195ccb3-d5a4-4cbd-82da-b80e3eab1abf' }
+        headers: { 'X-Authorization': 'YOUR_XBL_API_KEY' }
     })
     .then((response) => response.json())
     .then((data) => {
@@ -63,7 +63,7 @@ async function getAccData(apiKey) {
 
 async function getFriendsList () {
     await fetch('https://api.xbl.io/v2/friends', {
-        headers: { 'X-Authorization': 'f195ccb3-d5a4-4cbd-82da-b80e3eab1abf' }
+        headers: { 'X-Authorization': 'YOUR_XBL_API_KEY' }
     })
     .then((response) => response.json())
     .then((data) => {
@@ -74,7 +74,7 @@ async function getFriendsList () {
 
 async function getRecentlyPlayedXboxGames () {
     await fetch('https://api.xbl.io/v2/titles', {
-        headers: { 'X-Authorization': 'f195ccb3-d5a4-4cbd-82da-b80e3eab1abf' }
+        headers: { 'X-Authorization': 'YOUR_XBL_API_KEY' }
     })
     .then((response) => response.json())
     .then((data) => {
