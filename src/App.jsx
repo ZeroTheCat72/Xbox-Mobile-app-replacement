@@ -132,11 +132,11 @@ return (
 
 function GameTile({gameData}) {
     return (
-        <a href={'ms-windows-store://pdp/?productid=' + gameData.productId}>
-        <div className='gameTile' key={gameData.productId}>
-            <img className='gameTileImg' src={gameData.images.boxArt.url} />
-            <h3>{gameData.title}</h3>
-            <h3>{gameData.specificPrices?.purchaseable[0]?.listPrice == 0 ? 'Free' : gameData.specificPrices?.purchaseable[0]?.listPrice}{gameData.specificPrices?.purchaseable[0]?.listPrice == 0 ? '' : gameData.specificPrices.purchaseable[0]?.currency}</h3>
+        <a href={'ms-windows-store://pdp/?productid=' + gameData?.productId}>
+        <div className='gameTile' key={gameData?.productId}>
+            <img className='gameTileImg' src={gameData?.images?.boxArt?.url} />
+            <h3>{gameData?.title}</h3>
+            <h3>{gameData?.specificPrices?.purchaseable[0]?.listPrice == 0 ? 'Free' : gameData?.specificPrices?.purchaseable[0]?.listPrice}{gameData.specificPrices?.purchaseable[0]?.listPrice == 0 ? '' : gameData.specificPrices.purchaseable[0]?.currency}</h3>
         </div>
         </a>
     )
@@ -144,7 +144,7 @@ function GameTile({gameData}) {
 
 function RecentlyPlayedXboxGameTile({gameData}) {
     return (
-        <div style={{display: gameData.pfn == null ? 'none' : 'unset'}} className='gameTile' key={gameData?.titleId}>
+        <div style={{display: gameData?.pfn == null ? 'none' : 'unset'}} className='gameTile' key={gameData?.titleId}>
             <img className='gameTileImg' src={gameData?.displayImage} />
             <h3>{gameData?.name}</h3>
         </div>
@@ -153,10 +153,10 @@ function RecentlyPlayedXboxGameTile({gameData}) {
 
 function FriendTile({friendData}) {
     return (
-        <div style={{border: '2px solid #' + friendData.preferredColor.primaryColor}} className='friendTile' key={friendData.xuid}>
-            <img className='gamerPic' src={friendData.displayPicRaw} />
-            <h5 className='friendGamertag'>{friendData.modernGamertag}</h5>
-            <h4 className={friendData.presenceState == 'Online' ? 'presenceOnline' : 'presenceOffline'}>{friendData.presenceState}</h4>
+        <div style={{border: '2px solid #' + friendData?.preferredColor?.primaryColor}} className='friendTile' key={friendData?.xuid}>
+            <img className='gamerPic' src={friendData?.displayPicRaw} />
+            <h5 className='friendGamertag'>{friendData?.modernGamertag}</h5>
+            <h4 className={friendData?.presenceState == 'Online' ? 'presenceOnline' : 'presenceOffline'}>{friendData?.presenceState}</h4>
         </div>
     )
 }
