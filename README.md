@@ -15,3 +15,4 @@ I was gonna work on a search bar to make it more useful but I was making it a ch
 Since the XBL API doesnt accept its code being used in a frontend (what I did), You need an extension to enable Access Control Origin, this one is recommended: https://chromewebstore.google.com/detail/allow-cors-access-control/lhobafahddgcelffkeicbaginigeejlf
 
 Also, and thats very important, node_modules is missing since Github doesnt accept more than 100 files at the same time (thx vite)
+And you need an API Key from the XBL API website: https://xbl.io/dashboard
